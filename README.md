@@ -96,6 +96,10 @@ React.Dispatch<React.SetStateAction<DefinedType>>;
 
 Type: `any`
 
+## PERKS
+
+Added support for SSR. i.e Even though the local storage API is a browser API (`window.localStorage`), this should not break when using frameworks like NEXTJS or Vite-SSR which renders the component first on the server before hydrating on the client.
+
 [build-img]: https://github.com/emekaorji/use-store-state/actions/workflows/release.yml/badge.svg
 [build-url]: https://github.com/emekaorji/use-store-state/actions/workflows/release.yml
 [downloads-img]: https://img.shields.io/npm/dt/use-store-state
