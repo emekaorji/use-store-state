@@ -1,15 +1,15 @@
 import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 
-function useLocalStorage<T>(
+function useStoreState<T>(
   _key: string,
   _initialValue: T | (() => T)
 ): [T, Dispatch<SetStateAction<T>>];
-function useLocalStorage<T = undefined>(
+function useStoreState<T = undefined>(
   _key: string
 ): [T | undefined, Dispatch<SetStateAction<T | undefined>>];
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function useLocalStorage<T = undefined>(
+function useStoreState<T = undefined>(
   key: string,
   initialValue?: T | (() => T)
 ) {
@@ -42,4 +42,4 @@ function useLocalStorage<T = undefined>(
   return [value, setValue] as const;
 }
 
-export default useLocalStorage;
+export default useStoreState;
